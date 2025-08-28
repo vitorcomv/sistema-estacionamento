@@ -18,7 +18,7 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para estacionar: ");
 
             // Lê a placa digitada e guarda na variável "placaDigitada"
-            string placaDigitada = Console.ReadLine();
+            string placaDigitada = Console.ReadLine().ToUpper();
 
             // Adiciona a placa digitada na lista "veiculos"
             veiculos.Add(placaDigitada);
@@ -29,7 +29,7 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para remover: ");
 
             // Lê a placa digitada e guarda na variável "placa"
-            string placa = Console.ReadLine();
+            string placa = Console.ReadLine().ToUpper();
 
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
