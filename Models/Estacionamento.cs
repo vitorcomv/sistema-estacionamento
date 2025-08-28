@@ -38,10 +38,16 @@ namespace DesafioFundamentos.Models
 
                 // Declara as variavéis e seus valores
                 int horas = 0;
-                decimal valorTotal = 0; 
+                decimal valorTotal = 0;
+
+                if ( !int.TryParse(Console.ReadLine(), out horas) )
+                {
+                    Console.WriteLine("Valor inválido. Por favor, digite apenas números.");
+
+                    return;
+                }
 
                 // Converte string para int e lê o que foi digitado
-                horas = int.Parse(Console.ReadLine());
 
                 // Formúla para calcular o valor total
                 valorTotal = (precoInicial + precoPorHora * horas);
